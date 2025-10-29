@@ -1,0 +1,242 @@
+/* Paleta de colores primaverales */
+:root {
+    --color-primary: #8BC34A; /* Verde claro */
+    --color-secondary: #FFC107; /* Amarillo */
+    --color-tertiary: #FF5722; /* Naranja */
+    --color-background: #F1F8E9; /* Verde muy claro */
+    --color-text: #424242;
+    --color-light-text: #F5F5F5;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.header {
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* Secciones de Contenido */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Sección INICIO */
+.hero-section {
+    background: url('https://via.placeholder.com/1200x600?text=Bienvenida+Nutrición') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--color-light-text);
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro para que el texto resalte */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: var(--color-light-text);
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+}
+
+/* Sección FRUTAS */
+.fruit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.fruit-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.fruit-card:hover {
+    transform: translateY(-10px);
+}
+
+.fruit-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.fruit-card h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.fruit-card button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.fruit-card button:hover {
+    background-color: var(--color-tertiary);
+}
+
+/* Sección RECETAS */
+.recipe-section {
+    background-color: #e8f5e9;
+}
+
+.recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.recipe-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Sección CONSEJOS */
+.tip-section {
+    background-color: var(--color-background);
+}
+
+.tip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tip-content img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tip-text {
+    text-align: left;
+    max-width: 600px;
+}
+
+/* Sección CALENDARIO */
+.calendar-section {
+    background-color: #fce4ec; /* Rosa claro para el calendario */
+}
+
+#calendar-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-light-text);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .fruit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-content {
+        flex-direction: column;
+    }
+}
