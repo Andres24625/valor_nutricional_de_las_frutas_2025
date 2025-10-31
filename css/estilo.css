@@ -1,11 +1,11 @@
 /* Paleta de colores primaverales */
 :root {
-    --color-primary: #8BC34A; /* Verde claro */
-    --color-secondary: #FFC107; /* Amarillo */
-    --color-tertiary: #FF5722; /* Naranja */
-    --color-background: #F1F8E9; /* Verde muy claro */
+    --color-primary: #FFCC99; /* Rosado clarecente */
+    --color-secondary: #FF6666; /* Fucsia */
+    --color-tertiary: #CC3366; /* Naranja */
+    --color-background: #996699; /* Verde muy claro */
     --color-text: #424242;
-    --color-light-text: #F5F5F5;
+    --color-light-text: #000000;
 }
 
 /* Estilos Generales */
@@ -30,6 +30,23 @@ h1, h2, h3 {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+header  h1 {
+    color: #ff1493;
+    font-family: impact;
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-shadow: -3px -3px 1px #000, 2px 2px 1px #000
+}
+header .logo {
+    width: 100px;
+    border-radius: 60px;
+
 }
 
 .main-nav {

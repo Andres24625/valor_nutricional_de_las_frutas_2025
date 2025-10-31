@@ -1,6 +1,6 @@
 /* Paleta de colores primaverales */
 :root {
-    --color-primary: #C82A54; /* Verde claro */
+    --color-primary: #F3E5F5; /*Lavando claro*/
     --color-secondary: #FFC107; /* Amarillo */
     --color-tertiary: #FF5722; /* Naranja */
     --color-background: #F1F8E9; /* Verde muy claro */
@@ -100,7 +100,7 @@ section {
 }
 
 .fruit-card {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
